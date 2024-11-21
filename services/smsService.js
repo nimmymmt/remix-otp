@@ -7,7 +7,7 @@ import twilio from 'twilio';
 const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 const verifyServiceSid = process.env.TWILIO_VERIFY_SERVICE_SID;
 export const sendOtpSmsTwilio = async (phoneNumber) => {
-        console.log(otp)
+        
         try {
             const verification = await client.verify.v2.services(verifyServiceSid)
               .verifications.create({
